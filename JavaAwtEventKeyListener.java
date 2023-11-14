@@ -8,18 +8,21 @@ public class JavaAwtEventKeyListener implements KeyListener {
     public void keyTyped(KeyEvent keyEvent) {
         // This method is called when a key is typed
         // (pressed and released) but not consumed.
+	System.out.println("keyTyped(); " + keyEvent.getKeyCode());
+        System.out.println("Key released : " + keyEvent.getKeyChar());
     }
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
         // This method is called when a key is pressed down.
+	System.out.println("keyPressed(); " + keyEvent.getKeyCode());
     }
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
         // This method is called when a key is released.
         // You can put your custom logic here.
-        System.out.println("Key released: " + keyEvent.getKeyChar());
+        System.out.println("Key released : " + keyEvent.getKeyChar());
     }
 
     public static void main(String[] args) {
