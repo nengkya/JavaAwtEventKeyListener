@@ -1,6 +1,5 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.util.Arrays;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
@@ -21,7 +20,7 @@ class MapGenerator{
     int brickWidth = 80;
     int brickHeight = 50;
 
-    MapGenerator(int row, int column){
+    public MapGenerator(int row, int column){
 	map = new int[row][column];
 
 	/* Arrays.fill(map, 1); */
@@ -57,7 +56,7 @@ class GamePlay extends JPanel{
     MapGenerator map = new MapGenerator(3, 7);
 
     /* paint graphics memory buffer into screen */
-    void paint(Graphics2D graphics2D){
-	map.draw(graphics2D);
+    public void paint(Graphics graphics){
+	map.draw((Graphics2D)graphics);
     }
 }
